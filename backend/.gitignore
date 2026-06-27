@@ -28,3 +28,9 @@ htmlcov/
 # --- Logs ---
 *.log
 logs/
+
+# --- Hackathon dataset (large) ---
+data/candidates.jsonl
+data/candidates.jsonl.gz
+data/sample_candidates.json
+data/**/*.parquet

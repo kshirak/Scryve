@@ -1,0 +1,103 @@
+# Curated JobProfile for the Redrob Senior AI Engineer role.
+# This file mirrors the structured intent of the markdown JD, so the ranker
+# does not have to depend on heuristic JD parsing for the canonical target.
+
+role_title: Senior AI Engineer
+industry: AI / HR-Tech
+experience_min_years: 5
+experience_max_years: 9
+locations:
+  - Pune
+  - Noida
+  - Hyderabad
+  - Mumbai
+  - Delhi NCR
+
+required_skills:
+  - Production embeddings-based retrieval (sentence-transformers, OpenAI embeddings, BGE, E5)
+  - Vector databases or hybrid search (Pinecone, Weaviate, Qdrant, Milvus, OpenSearch, Elasticsearch, FAISS)
+  - Strong Python
+  - Ranking system evaluation (NDCG, MRR, MAP, offline-to-online correlation, A/B testing)
+
+preferred_skills:
+  - LLM fine-tuning (LoRA, QLoRA, PEFT)
+  - Learning-to-rank (XGBoost-based or neural)
+  - HR-tech or marketplace product experience
+  - Distributed systems and large-scale inference optimization
+  - Open-source contributions in AI/ML
+
+mandatory_requirements:
+  - End-to-end production deployment of ranking / retrieval / recommendation systems
+  - Pre-LLM-era applied ML production experience
+  - Active recent (<= 18 months) code shipping
+
+nice_to_have_requirements:
+  - NLP / Information Retrieval depth
+  - Operational experience with embedding drift and retrieval-quality regression
+  - Experience mentoring engineers
+
+disqualifiers:
+  - Pure research-only background with no production deployment
+  - AI experience limited to recent LangChain + hosted-LLM usage (<12 months)
+  - Senior engineers who have not written code in 18+ months ("architect-only")
+  - Title-chasing job-hopping pattern (<1.5 yr tenure repeatedly)
+  - Frameworks-only portfolio (LangChain tutorials, demo blogs)
+  - Entirely-consulting career history (TCS, Infosys, Wipro, Accenture, Cognizant, Capgemini)
+  - Primary expertise in CV / speech / robotics without NLP / IR exposure
+  - 5+ years of only closed-source proprietary work with no external validation
+
+# Bag-of-keywords used by downstream keyword/feature matchers.
+# These are deliberately specific to the JD's intent.
+required_keywords:
+  - embeddings
+  - retrieval
+  - vector search
+  - hybrid search
+  - ranking
+  - sentence-transformers
+  - bge
+  - e5
+  - pinecone
+  - weaviate
+  - qdrant
+  - milvus
+  - opensearch
+  - elasticsearch
+  - faiss
+  - ndcg
+  - mrr
+  - map
+  - a/b test
+  - python
+
+preferred_keywords:
+  - lora
+  - qlora
+  - peft
+  - fine-tuning
+  - xgboost
+  - learning to rank
+  - ltr
+  - recommendation
+  - rag
+  - llm
+  - hr-tech
+  - marketplace
+  - distributed
+  - inference
+
+disqualifier_keywords:
+  - tcs
+  - infosys
+  - wipro
+  - accenture
+  - cognizant
+  - capgemini
+
+# Behavioral signal thresholds used to derive an availability multiplier
+# downstream. Candidates below these thresholds get penalized, not removed.
+behavioral_thresholds:
+  min_recruiter_response_rate: 0.20
+  max_last_active_days: 90
+  min_interview_completion_rate: 0.50
+  min_profile_completeness: 60
