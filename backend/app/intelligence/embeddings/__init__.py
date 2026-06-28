@@ -1,7 +1,29 @@
-"""Reserved for Sprint 3.
+"""Text embedding backends used across phases.
 
-This module will host CPU-friendly text embedding utilities (sentence
-transformers via `onnxruntime`, BM25 + dense hybrid retrieval helpers, and
-an embedding cache). Deliberately empty in Sprint 2 to keep the dependency
-surface narrow.
+Phase 3 (Job Intelligence) ships:
+
+* :class:`HashingEmbedder` — dependency-free deterministic embedder.
+* :class:`SentenceTransformerEmbedder` — optional richer backend.
+* :func:`build_embedder` — factory that honours
+  ``settings.embedding_backend``.
+
+Vectors are L2-normalized so cosine similarity reduces to a dot product,
+which means they can be indexed directly with FAISS ``IndexFlatIP`` in
+Phase 4.
 """
+
+from app.intelligence.embeddings.embedder import (
+    Embedder,
+    EmbeddingResult,
+    HashingEmbedder,
+    SentenceTransformerEmbedder,
+    build_embedder,
+)
+
+__all__ = [
+    "Embedder",
+    "EmbeddingResult",
+    "HashingEmbedder",
+    "SentenceTransformerEmbedder",
+    "build_embedder",
+]

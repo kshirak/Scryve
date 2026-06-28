@@ -70,6 +70,15 @@ class Settings(BaseSettings):
         default="INFO", alias="LOG_LEVEL"
     )
 
+    # --- Embeddings (Phase 3 — Job Intelligence) ---
+    embedding_backend: Literal["hashing", "sentence-transformers"] = Field(
+        default="hashing", alias="EMBEDDING_BACKEND"
+    )
+    embedding_model_name: str = Field(
+        default="hashing-v1", alias="EMBEDDING_MODEL_NAME"
+    )
+    embedding_dimension: int = Field(default=384, alias="EMBEDDING_DIMENSION")
+
     # ------------------------------------------------------------------
     # Validators
     # ------------------------------------------------------------------

@@ -29,6 +29,9 @@ jsonschema==4.23.0
 pyyaml==6.0.2
 python-dateutil==2.9.0.post0
 python-docx==1.1.2
+numpy==2.2.1
+# Optional (loaded on demand for richer semantic embeddings):
+# sentence-transformers==3.3.1
 
 # --- Testing ---
 pytest==8.3.4
